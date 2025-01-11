@@ -3,6 +3,7 @@
 namespace Kamelher\Devices\Providers;
 
 use Illuminate\Support\ServiceProvider;
+
 class DeviceManagerServiceProvider extends ServiceProvider
 {
     public function register()
@@ -11,9 +12,12 @@ class DeviceManagerServiceProvider extends ServiceProvider
     }
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/../../config/device-manager.php' => config_path('device-manager.php'),
-        ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
+            ], 'devices-manager-migrations');
+        }
     }
 
 }
