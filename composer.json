@@ -8,6 +8,13 @@
             "Kamelher\\Devices\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kamelher\\Devices\\Providers\\DeviceManagerServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "KamelEddine Heragmi"
