@@ -20,6 +20,8 @@ class DeviceFactory extends Factory
     public function definition(): array
     {
         return [
+            'name' => 'Device 1',
+            'mac_address' => '00:00:00:00:00:00',
             'uuid'=> Str::uuid(),
             'status'=> DeviceStatus::Unverified->value,
             'device_type' => DeviceTypes::Desktop->value,

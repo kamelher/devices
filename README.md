@@ -13,7 +13,6 @@ Laravel Device Manager is a powerful and flexible package that simplifies the pr
 *   **Customizable Device Model:**  Provides a default `Device` model that you can extend and customize to fit your specific needs.
 *   **Flexible Device Attributes:**  Store essential device information like name, model, MAC address, metadata, and more.
 *   **Simplified Device Creation:** Streamlined device creation process using a custom `DeviceFactory`.
-*   **Event-Driven Architecture:**  Leverages Eloquent events for easy integration with your application's logic.
 *   **Well-Tested:** Includes comprehensive test suite to ensure reliability.
 
 ## Installation
