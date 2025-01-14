@@ -11,7 +11,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kamelher\\Devices\\Providers\\DeviceManagerServiceProvider"
+                "Kamelher\\Devices\\DeviceManagerServiceProvider"
             ]
         }
     },

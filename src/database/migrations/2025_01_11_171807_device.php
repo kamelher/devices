@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Kamelher\Devices\Enums\DeviceStatus;
+use Kamelher\Devices\Enums\DeviceTypes;
 
 return new class extends Migration
 {
@@ -14,10 +16,10 @@ return new class extends Migration
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('mac_address')->nullable();
+            $table->string('mac_address')->unique();
             $table->string('uuid')->unique();
             $table->string('status')->default(DeviceStatus::Unverified->value);
-            $table->string('device_type')->nullable();
+            $table->string('device_type')->default(DeviceTypes::Desktop->value);
             $table->string('device_model')->nullable();
             $table->json('metadata')->nullable();
             $table->morphs('deviceable');
