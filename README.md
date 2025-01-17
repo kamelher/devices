@@ -1,4 +1,4 @@
-# Laravel Device Manager
+# Laravel Devices Manager
 
 [![Latest Stable Version](https://poser.pugx.org/your-vendor-name/laravel-device-manager/v/stable)](https://packagist.org/packages/your-vendor-name/laravel-device-manager)
 [![Total Downloads](https://poser.pugx.org/your-vendor-name/laravel-device-manager/downloads)](https://packagist.org/packages/your-vendor-name/laravel-device-manager)
