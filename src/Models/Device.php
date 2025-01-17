@@ -1,15 +1,17 @@
 <?php
 
-namespace Kamelher\Devices\app\Models;
+namespace Kamelher\Devices\Models;
 
+use Database\Factories\DeviceFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 use Kamelher\Devices\Enums\DeviceStatus;
 use Kamelher\Devices\Enums\DeviceTypes;
 
 class Device extends Model
 {
+
+    /** @use HasFactory<DeviceFactory> */
     use hasFactory;
 
 

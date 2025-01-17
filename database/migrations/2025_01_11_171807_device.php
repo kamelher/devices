@@ -1,13 +1,14 @@
 <?php
 
+namespace database\migrations;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Kamelher\Devices\Enums\DeviceStatus;
 use Kamelher\Devices\Enums\DeviceTypes;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */

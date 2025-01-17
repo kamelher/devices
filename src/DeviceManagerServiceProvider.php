@@ -2,6 +2,7 @@
 
 namespace Kamelher\Devices;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\ServiceProvider;
 
 class DeviceManagerServiceProvider extends ServiceProvider
@@ -10,10 +11,10 @@ class DeviceManagerServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/config/devices.php', 'devices');
 
-
     }
     public function boot()
     {
+
 
         if ($this->app->runningInConsole()) {
             $this->publishes([

@@ -5,7 +5,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kamelher\\Devices\\": "src/"
+            "Kamelher\\Devices\\": "src/",
+            "Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kamelher\\Devices\\": "tests/",
+            "Database\\Factories\\": "database/factories/"
         }
     },
     "extra": {
@@ -15,11 +22,26 @@
             ]
         }
     },
+    "scripts": {
+        "test": [
+            "@php artisan test --parallel --coverage"
+        ]
+    },
     "authors": [
         {
             "name": "KamelEddine Heragmi"
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+
+    }
 }

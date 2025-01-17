@@ -11,5 +11,5 @@ return [
     |
     */
 
-    'device_model'=> env('DEFAULT_DEVICE_MODEL', 'Kamelher\Devices\app\Models\Device'),
+    'device_model'=> env('DEFAULT_DEVICE_MODEL', 'Kamelher\Devices\Models\Device'),
 ];

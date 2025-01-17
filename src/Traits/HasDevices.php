@@ -1,13 +1,13 @@
 <?php
 
-namespace Kamelher\Devices\app\Traits;
+namespace Kamelher\Devices\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
-use Kamelher\Devices\app\Models\Device;
 use Kamelher\Devices\Enums\DeviceStatus;
 use Kamelher\Devices\Enums\DeviceTypes;
+use Kamelher\Devices\models\Device;
 
 trait HasDevices
 {
@@ -17,6 +17,14 @@ trait HasDevices
     public function devices(): MorphMany
     {
         return $this->morphMany(Device::class, 'deviceable');
+    }
+
+    public function getDeviceByMacAddress(?string $mac_address): ?Device
+    {
+        if (empty($mac_address)) {
+            return null;
+        }
+        return $this->devices()->where('mac_address', $mac_address)->first();
     }
 
     /**

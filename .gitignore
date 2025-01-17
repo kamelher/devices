@@ -1,4 +1,4 @@
 vendor/
 .idea
 src/.DS_Store
-src/database/.DS_Store
+database/.DS_Store
